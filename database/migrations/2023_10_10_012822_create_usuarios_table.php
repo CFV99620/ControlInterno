@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('Nombre',50);
             $table->string('Telefono',15);
+            $table->string('User',50);
+            $table->string('password',60);
         });
     }
 

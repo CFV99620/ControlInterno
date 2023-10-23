@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('inventarios', function (Blueprint $table) {
-            $table->id();
+            $table->string('id', 255)->unique()->change();
+            //$table->string('id', 255)->unique();
             $table->string('Estatus',200);
             $table->Text('Comentario');
             $table->unsignedBigInteger('id_Categoria');
